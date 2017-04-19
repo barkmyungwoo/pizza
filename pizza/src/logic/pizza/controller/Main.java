@@ -8,6 +8,7 @@ public class Main {
 		View menu = new View();
 		
 		menu.display();
+		System.out.println("hi!!!!");
 	}
 
 }
