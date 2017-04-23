@@ -12,6 +12,25 @@ public class MemberManager {
 	Member tmem = new Member();
 	int cnt = 0;
 
+	
+//------------------------------------------------------------------------
+
+	{
+		mem[0] = new Member("kim12*3", "±èÀ¯½Å", "01234!", "kim123@hanmail.net", 'M', 33);
+		mem[1] = new Member("bmw923", "¹Ú¸í¿ì", "45678", "kim123@google.com", 'M', 17);
+		mem[2] = new Member("kongyou", "¿µ½Å", "850923", "kim123@naver.com", 'M', 32);
+		mem[3] = new Member("bbakayaro", "ÀÌ¼ø½Å", "pwkkk34!", "kim123@naver.com", 'M', 35);
+		mem[4] = new Member("yksrose77#", "À±°æ¼÷", "yksrose77#", "yksrose77@daum.net", 'F', 29);
+		cnt = 5;
+
+	}
+
+//------------------------------------------------------------------------
+	
+	
+	
+	
+	
 	public void memberInput() {
 		if (cnt == SIZE) {
 			System.out.println("¸Þ¸ð¸®°¡ °¡µæ Ã¡½À´Ï´Ù.");
@@ -133,6 +152,8 @@ public class MemberManager {
 				for(int i=index;i<cnt-1;i++){
 					mem[i] = mem[i+1];
 				}				
+				mem[cnt]= new Member();
+				cnt--;
 			}
 		}
 	}
