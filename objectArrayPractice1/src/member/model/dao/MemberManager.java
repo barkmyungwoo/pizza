@@ -107,7 +107,33 @@ public class MemberManager {
 	}
 
 	public void deleteMember() {
+		System.out.print("삭제할 ID 를 적어 주세요 : ");
+		int index = searchMemberId(sc.next());
 
+		if (index == -1) {
+			System.out.println("아이디가 없어요.");
+			return;
+		}
+
+		System.out.println("비밀번호를 알려 주세요 : ");
+		String s = sc.next();
+		int count=0;
+
+		if (mem[index].getPassword().length() == s.length()) {
+			for (int j = 0; j < s.length(); j++) {
+				if (mem[index].getPassword().charAt(j) == s.charAt(j)) {
+					count++;
+				}
+			}
+			if (s.length() == count) {
+				mem[index]= new Member();
+				System.out.println("삭제되었습니다.");
+
+				for(int i=index;i<cnt-1;i++){
+					mem[i] = mem[i+1];
+				}				
+			}
+		}
 	}
 
 	public void printAllMember() {
@@ -120,10 +146,10 @@ public class MemberManager {
 		// id 오름차순
 		for (int i = 0; i < cnt - 1; i++) {
 			for (int j = i; j < cnt; j++) {
-				if (mem[i].getId().compareTo(mem[j].getId()) <0) {
+				if (mem[i].getId().compareTo(mem[j].getId()) < 0) {
 					tmem = mem[i];
 					mem[i] = mem[j];
-					mem[j] = tmem;					
+					mem[j] = tmem;
 				}
 			}
 		}
@@ -136,7 +162,7 @@ public class MemberManager {
 				if (mem[i].getId().compareTo(mem[j].getId()) > 0) {
 					tmem = mem[i];
 					mem[i] = mem[j];
-					mem[j] = tmem;					
+					mem[j] = tmem;
 				}
 			}
 		}

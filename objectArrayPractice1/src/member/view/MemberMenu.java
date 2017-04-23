@@ -214,5 +214,4 @@ public class MemberMenu {
 
 		} while (a != 9);
 	}
-
 }
