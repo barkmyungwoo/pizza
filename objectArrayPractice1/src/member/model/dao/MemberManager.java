@@ -168,7 +168,7 @@ public class MemberManager {
 		// id 오름차순
 		for (int i = 0; i < cnt - 1; i++) {
 			for (int j = i; j < cnt; j++) {
-				if (mem[i].getId().compareTo(mem[j].getId()) < 0) {
+				if (mem[i].getId().compareTo(mem[j].getId()) > 0) {
 					tmem = mem[i];
 					mem[i] = mem[j];
 					mem[j] = tmem;
@@ -181,7 +181,7 @@ public class MemberManager {
 		// id 내림차순
 		for (int i = 0; i < cnt - 1; i++) {
 			for (int j = i; j < cnt; j++) {
-				if (mem[i].getId().compareTo(mem[j].getId()) > 0) {
+				if (mem[i].getId().compareTo(mem[j].getId()) < 0) {
 					tmem = mem[i];
 					mem[i] = mem[j];
 					mem[j] = tmem;
@@ -221,7 +221,7 @@ public class MemberManager {
 		sortIDAsc();
 		for (int i = 0; i < cnt - 1; i++) {
 			for (int j = i; j < cnt; j++) {
-				if (mem[i].getGender() > mem[j].getGender()) {
+				if (mem[i].getGender() < mem[j].getGender()) {
 					tmem = mem[i];
 					mem[i] = mem[j];
 					mem[j] = tmem;
@@ -232,7 +232,6 @@ public class MemberManager {
 
 	public void changePassword(int index, String s) {
 		mem[index].setPassword(s);
-
 	}
 
 	public void changeEmail(int index, String s) {
