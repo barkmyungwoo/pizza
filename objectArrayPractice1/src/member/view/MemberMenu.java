@@ -3,6 +3,7 @@ package member.view;
 import java.util.Scanner;
 import member.model.dao.MemberManager;
 
+
 public class MemberMenu {
 	Scanner sc = new Scanner(System.in);
 	MemberManager mem = new MemberManager();

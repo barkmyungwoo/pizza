@@ -63,8 +63,4 @@ public class Member {
 		return "[id=" + id + ", name=" + name + ", password=" + password + ", email=" + email + ", gender="
 				+ gender + ", age=" + age + "]";
 	}
-	
-	
-	
-
 }

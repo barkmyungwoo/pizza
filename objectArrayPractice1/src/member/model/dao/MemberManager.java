@@ -64,6 +64,7 @@ public class MemberManager {
 		return -1;
 	}
 
+	
 	public int searchMemberName(String s) {
 		int count;
 
