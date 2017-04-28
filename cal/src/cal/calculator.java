@@ -12,15 +12,13 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class calculator {
+	
 	int text = 0, num1 = 0, num2 = 0, cal = 0;
 
 	private JFrame frame;
 	private JTextField textField;
 
-	/**
-	 * Launch the application.
-	 */
-
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -34,18 +32,12 @@ public class calculator {
 		});
 	}
 
-	/**
-	 * Create the application.
-	 */
 
 	public calculator() {
 		initialize();
 	}
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
-
+	
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 426, 451);
@@ -60,6 +52,162 @@ public class calculator {
 		panel.add(textField);
 		textField.setColumns(10);
 
+		
+		JButton button_1 = new JButton("1");
+		button_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (num1 == 0) { // 첫번째 수에 값이 없을 경우
+					num1 = 1;
+					textField.setText(Integer.toString(num1));
+
+				} else {
+					if (cal == 0) {
+						num1 *= 10;
+						num1 += 1;
+						textField.setText(Integer.toString(num1));
+					} else {
+						num2 *= 10;
+						num2 += 1;
+						textField.setText(Integer.toString(num2));
+					}
+				}
+
+			}
+		});
+		button_1.setFont(new Font("굴림", Font.BOLD, 20));
+		button_1.setBounds(12, 250, 90, 70);
+		panel.add(button_1);
+
+		JButton button_2 = new JButton("2");
+		button_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				if (num1 == 0) { // 첫번째 수에 값이 없을 경우
+					num1 = 2;
+					textField.setText(Integer.toString(num1));
+
+				} else {
+					if (cal == 0) {
+						num1 *= 10;
+						num1 += 2;
+						textField.setText(Integer.toString(num1));
+					} else {
+						num2 *= 10;
+						num2 += 2;
+						textField.setText(Integer.toString(num2));
+					}
+				}
+
+			}
+		});
+		button_2.setFont(new Font("굴림", Font.BOLD, 20));
+		button_2.setBounds(114, 250, 90, 70);
+		panel.add(button_2);
+
+		JButton button_3 = new JButton("3");
+		button_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				if (num1 == 0) { // 첫번째 수에 값이 없을 경우
+					num1 = 3;
+					textField.setText(Integer.toString(num1));
+
+				} else {
+					if (cal == 0) {
+						num1 *= 10;
+						num1 += 3;
+						textField.setText(Integer.toString(num1));
+					} else {
+						num2 *= 10;
+						num2 += 3;
+						textField.setText(Integer.toString(num2));
+					}
+				}
+
+			}
+		});
+		button_3.setFont(new Font("굴림", Font.BOLD, 20));
+		button_3.setBounds(216, 250, 90, 70);
+		panel.add(button_3);
+
+		JButton button_4 = new JButton("4");
+		button_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				if (num1 == 0) { // 첫번째 수에 값이 없을 경우
+					num1 = 4;
+					textField.setText(Integer.toString(num1));
+
+				} else {
+					if (cal == 0) {
+						num1 *= 10;
+						num1 += 4;
+						textField.setText(Integer.toString(num1));
+					} else {
+						num2 *= 10;
+						num2 += 4;
+						textField.setText(Integer.toString(num2));
+					}
+				}
+
+			}
+		});
+		button_4.setFont(new Font("굴림", Font.BOLD, 20));
+		button_4.setBounds(12, 165, 90, 70);
+		panel.add(button_4);
+
+		JButton button_5 = new JButton("5");
+		button_5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				if (num1 == 0) { // 첫번째 수에 값이 없을 경우
+					num1 = 5;
+					textField.setText(Integer.toString(num1));
+
+				} else {
+					if (cal == 0) {
+						num1 *= 10;
+						num1 += 5;
+						textField.setText(Integer.toString(num1));
+					} else {
+						num2 *= 10;
+						num2 += 5;
+						textField.setText(Integer.toString(num2));
+					}
+				}
+
+			}
+		});
+		button_5.setFont(new Font("굴림", Font.BOLD, 20));
+		button_5.setBounds(114, 165, 90, 70);
+		panel.add(button_5);
+		
+		JButton button_6 = new JButton("6");
+		button_6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				if (num1 == 0) { // 첫번째 수에 값이 없을 경우
+					num1 = 6;
+					textField.setText(Integer.toString(num1));
+
+				} else {
+					if (cal == 0) {
+						num1 *= 10;
+						num1 += 6;
+						textField.setText(Integer.toString(num1));
+					} else {
+						num2 *= 10;
+						num2 += 6;
+						textField.setText(Integer.toString(num2));
+					}
+				}
+
+			}
+		});
+		button_6.setFont(new Font("굴림", Font.BOLD, 20));
+		button_6.setBounds(216, 165, 90, 70);
+		panel.add(button_6);
+		
 		JButton button_7 = new JButton("7");
 		button_7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -137,163 +285,6 @@ public class calculator {
 		button_9.setBounds(216, 80, 90, 70);
 		panel.add(button_9);
 
-		JButton button_6 = new JButton("6");
-		button_6.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-				if (num1 == 0) { // 첫번째 수에 값이 없을 경우
-					num1 = 6;
-					textField.setText(Integer.toString(num1));
-
-				} else {
-					if (cal == 0) {
-						num1 *= 10;
-						num1 += 6;
-						textField.setText(Integer.toString(num1));
-					} else {
-						num2 *= 10;
-						num2 += 6;
-						textField.setText(Integer.toString(num2));
-					}
-				}
-
-			}
-		});
-		button_6.setFont(new Font("굴림", Font.BOLD, 20));
-		button_6.setBounds(216, 165, 90, 70);
-		panel.add(button_6);
-
-		JButton button_4 = new JButton("4");
-		button_4.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-				if (num1 == 0) { // 첫번째 수에 값이 없을 경우
-					num1 = 4;
-					textField.setText(Integer.toString(num1));
-
-				} else {
-					if (cal == 0) {
-						num1 *= 10;
-						num1 += 4;
-						textField.setText(Integer.toString(num1));
-					} else {
-						num2 *= 10;
-						num2 += 4;
-						textField.setText(Integer.toString(num2));
-					}
-				}
-
-			}
-		});
-		button_4.setFont(new Font("굴림", Font.BOLD, 20));
-		button_4.setBounds(12, 165, 90, 70);
-		panel.add(button_4);
-
-		JButton button_5 = new JButton("5");
-		button_5.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-				if (num1 == 0) { // 첫번째 수에 값이 없을 경우
-					num1 = 5;
-					textField.setText(Integer.toString(num1));
-
-				} else {
-					if (cal == 0) {
-						num1 *= 10;
-						num1 += 5;
-						textField.setText(Integer.toString(num1));
-					} else {
-						num2 *= 10;
-						num2 += 5;
-						textField.setText(Integer.toString(num2));
-					}
-				}
-
-			}
-		});
-		button_5.setFont(new Font("굴림", Font.BOLD, 20));
-		button_5.setBounds(114, 165, 90, 70);
-		panel.add(button_5);
-
-		JButton button_3 = new JButton("3");
-		button_3.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-				if (num1 == 0) { // 첫번째 수에 값이 없을 경우
-					num1 = 3;
-					textField.setText(Integer.toString(num1));
-
-				} else {
-					if (cal == 0) {
-						num1 *= 10;
-						num1 += 3;
-						textField.setText(Integer.toString(num1));
-					} else {
-						num2 *= 10;
-						num2 += 3;
-						textField.setText(Integer.toString(num2));
-					}
-				}
-
-			}
-		});
-		button_3.setFont(new Font("굴림", Font.BOLD, 20));
-		button_3.setBounds(216, 250, 90, 70);
-		panel.add(button_3);
-
-		JButton button_1 = new JButton("1");
-		button_1.addActionListener(new ActionListener() {
-
-			public void actionPerformed(ActionEvent e) {
-				if (num1 == 0) { // 첫번째 수에 값이 없을 경우
-					num1 = 1;
-					textField.setText(Integer.toString(num1));
-
-				} else {
-					if (cal == 0) {
-						num1 *= 10;
-						num1 += 1;
-						textField.setText(Integer.toString(num1));
-					} else {
-						num2 *= 10;
-						num2 += 1;
-						textField.setText(Integer.toString(num2));
-					}
-				}
-
-			}
-
-		});
-		button_1.setFont(new Font("굴림", Font.BOLD, 20));
-		button_1.setBounds(12, 250, 90, 70);
-		panel.add(button_1);
-
-		JButton button_2 = new JButton("2");
-		button_2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-				if (num1 == 0) { // 첫번째 수에 값이 없을 경우
-					num1 = 2;
-					textField.setText(Integer.toString(num1));
-
-				} else {
-					if (cal == 0) {
-						num1 *= 10;
-						num1 += 2;
-						textField.setText(Integer.toString(num1));
-					} else {
-						num2 *= 10;
-						num2 += 2;
-						textField.setText(Integer.toString(num2));
-					}
-				}
-
-			}
-		});
-		button_2.setFont(new Font("굴림", Font.BOLD, 20));
-		button_2.setBounds(114, 250, 90, 70);
-		panel.add(button_2);
-
 		JButton button_dot = new JButton(".");
 		button_dot.setFont(new Font("굴림", Font.BOLD, 24));
 		button_dot.setBounds(216, 335, 90, 70);
@@ -318,7 +309,6 @@ public class calculator {
 				}
 
 			}
-
 		});
 		button_0.setFont(new Font("굴림", Font.BOLD, 23));
 		button_0.setBounds(12, 335, 192, 70);
@@ -344,7 +334,6 @@ public class calculator {
 					}
 				}
 			}
-
 		});
 		button_plus.setFont(new Font("굴림", Font.BOLD, 25));
 		button_plus.setBounds(318, 80, 80, 60);
@@ -355,7 +344,6 @@ public class calculator {
 			public void actionPerformed(ActionEvent e) {
 				if (num1 == 0)
 					;
-
 				else {
 					if (num2 == 0) {
 						cal = 2;
